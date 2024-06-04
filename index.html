@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <button class="prev" onclick="prevImage()">&#10094;</button>
+            <img id="carousel-image" src="default.jpg" alt="Carousel Image">
+            <button class="next" onclick="nextImage()">&#10095;</button>
+            <button class="add-image" onclick="openModal()">+</button>
+        </div>
+    </div>
+    
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add a new image</h2>
+            <input type="file" id="imageInput">
+            <button onclick="addImage()">Add Image</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
